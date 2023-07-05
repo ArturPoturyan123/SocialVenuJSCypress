@@ -23,7 +23,7 @@ class DasboardLoginPage{
     }
 
     allAccountsButton(){
-        this.allAccountsBtn;
+        return this.allAccountsBtn;
     }
 
 
