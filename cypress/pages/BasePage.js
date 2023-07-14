@@ -35,7 +35,11 @@ export  class BasePage{
       cy.get(element).should('exist');
     }
 
-
-
+    isElementNotPresentByXpath(element) {
+      cy.contains(element).should('not.exist');
+    }
+    isElementPresentByXpath(element) {
+      cy.contains(element).should('exist');
+    }
 }
 

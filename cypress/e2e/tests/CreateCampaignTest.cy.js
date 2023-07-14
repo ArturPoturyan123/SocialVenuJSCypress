@@ -40,5 +40,17 @@ describe("",()=>{
         createCampaignPage.clickSaveAndCreateButton();
         createCampaignPage.isElementPresent(createCampaignPage.editSmsInvitationButton)
     })
+
+
+    it("verifyFunctionalityOfStep4NotDisplayedAfterSelectingAwarenessType", () => {
+        createCampaignPage.open();
+        createCampaignPage.clickAwarenessCampaignType();
+        createCampaignPage.isElementNotPresentByXpath(createCampaignPage.campaignSte4);
+      });      
+
+      it("verifyFunctionalityOfStep4DisplayedAfterSelectingIncentiveType", () => {
+        createCampaignPage.open();
+        createCampaignPage.isElementPresentByXpath(createCampaignPage.campaignSte4);
+      });      
 })
 

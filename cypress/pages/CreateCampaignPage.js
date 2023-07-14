@@ -14,6 +14,8 @@ class CreateCampaignPage extends BasePage{
     rewardPhoneNumberInput = "#reward-phone-number-input";
     saveAndCreateButton = "#save-and-create-button"; 
     editSmsInvitationButton = "#edit-sms-invitation-button";
+    awarenessCampaignType = "#campaign-type-change-button-Awareness-Campaign";
+    campaignSte4 = 'How would you like to reward creators?';
 
    
 
@@ -64,6 +66,10 @@ class CreateCampaignPage extends BasePage{
         cy.get(this.saveAndCreateButton).click();
     }
 
+
+    clickAwarenessCampaignType(){
+        cy.get(this.awarenessCampaignType).click();
+    }
 
 
 
