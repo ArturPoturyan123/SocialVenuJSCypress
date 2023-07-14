@@ -1,4 +1,13 @@
 export  class BasePage{
+  saveButton = "#bottom-bar-save-action";
+
+
+
+  clickSaveButton (){
+    this.isElementPresent(this.saveButton)
+    cy.get(this.saveButton).click({force:true});
+    cy.wait(2000);
+  }
   
     
     getUrl(url){
@@ -38,8 +47,23 @@ export  class BasePage{
     isElementNotPresentByXpath(element) {
       cy.contains(element).should('not.exist');
     }
+
     isElementPresentByXpath(element) {
       cy.contains(element).should('exist');
     }
+
+   getRandomNumericString(length) {
+  var random = Math.random;
+  var sb = [];
+  for (var i = 0; i < length; i++) {
+    sb.push(Math.floor(random() * 10));
+  }
+  return sb.join('');
+}
+
+ getString() {
+  return "test " + this.getRandomNumericString(5);
+}
+
 }
 
