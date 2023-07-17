@@ -18,31 +18,37 @@ class CompanyProfilePage extends BasePage {
         const cityNames = ["New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"];
         const randomIndex = Cypress._.random(0, cityNames.length - 1);
         const randomCityName = cityNames[randomIndex];
-        cy.get(this.cityNameField).clear({force: true}).type(randomCityName);
+        cy.get(this.cityNameField).type(randomCityName);
     }
 
     setRandomCompanyWebsite(){
-       const companyWebsites = ["youtube.com", "sv.com", "nike.com", "adidas.com", "fresh.com"];
-       const randomIndex = Cypress._.random(0, companyWebsites.length - 1);
-       const randomWebsite = "https://" + companyWebsites[randomIndex];
-       cy.get(this.webSiteField).clear({force: true}).type(randomWebsite);
-       
+      this.eraseAllTextField(this.webSiteField);
+      cy.get(this.webSiteField).should('be.empty');
+      const companyWebsites = ["youtube.com", "sv.com", "nike.com", "adidas.com", "fresh.com"];
+      const randomIndex = Cypress._.random(0, companyWebsites.length - 1);
+      const randomWebsite = "https://" + companyWebsites[randomIndex];
+      cy.get(this.webSiteField).type(randomWebsite);
     }
 
     setRandomCompanyName(randomText){
-        const valueString = "Test Automation Company Name " + randomText;
-        cy.get(this.companyNameField).clear({force: true}).type(valueString);
+    this.eraseAllTextField(this.companyNameField);
+    cy.get(this.companyNameField).should('be.empty');
+    const valueString = "Test Automation Company Name " + randomText;
+    cy.get(this.companyNameField).type(valueString);
     }
     
     setRandomCompanyAddress(randomText){
-        const valueString = "Test Automation Company Address " + randomText;
-        cy.get(this.addressNameField).clear({force: true}).type(valueString);
+      this.eraseAllTextField(this.addressNameField);
+      cy.get(this.addressNameField).should('be.empty');
+      const valueString = "Test Automation Company Address " + randomText;
+      cy.get(this.addressNameField).type(valueString);
     }
 
     setRandomZipCode(){
-        const randomZipCode = String(10000 + Math.floor(Math.random() * 90000));
-        cy.get(this.zipCodeField).clear({force: true}).type(randomZipCode);
-
+    this.eraseAllTextField(this.zipCodeField);
+    cy.get(this.zipCodeField).should('be.empty');
+    const randomZipCode = String(10000 + Math.floor(Math.random() * 90000));
+    cy.get(this.zipCodeField).clear({force: true}).type(randomZipCode);
     }
 
      getCompanyName() {

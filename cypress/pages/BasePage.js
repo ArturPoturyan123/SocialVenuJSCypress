@@ -4,9 +4,9 @@ export  class BasePage{
 
 
   clickSaveButton (){
+    cy.wait(2000);
     this.isElementPresent(this.saveButton)
     cy.get(this.saveButton).click({force:true});
-    cy.wait(2000);
   }
   
     
@@ -41,7 +41,7 @@ export  class BasePage{
     }
 
     isElementPresent(element) {
-      cy.get(element).should('exist');
+      return cy.get(element).should('exist');
     }
 
     isElementNotPresentByXpath(element) {
