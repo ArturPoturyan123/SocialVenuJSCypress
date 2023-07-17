@@ -28,13 +28,11 @@ class CreateCampaignPage extends BasePage{
     }
 
     openAllIncentiveCampaignSteps() {
-      
         this.createCampaignSteps.push(cy.get("#create_campaign_step_2"));
         this.createCampaignSteps.push(cy.get("#create_campaign_step_3"));
         this.createCampaignSteps.push(cy.get("#create_campaign_step_4"));
         this.createCampaignSteps.push(cy.get("#create_campaign_step_5"));
         this.createCampaignSteps.push(cy.get("#create_campaign_step_6"));
-        
         this.createCampaignSteps.forEach(createCampaignStep => {
           cy.wait(2000)
           createCampaignStep.click({ force: true });
