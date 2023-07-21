@@ -5,7 +5,7 @@ const Chance = require('chance');
 const chance = new Chance(); // Create a new instance of Chance for generating random data
 
 // Define a function to generate random data
-const generateRandomData = () => {
+ generateRandomData = () => {
   return {
     firstName: chance.first(),
     lastName: chance.last(),

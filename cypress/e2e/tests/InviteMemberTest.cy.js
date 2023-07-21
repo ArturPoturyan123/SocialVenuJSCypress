@@ -1,22 +1,11 @@
 import InviteMemberPage from "../../pages/InviteMemberPage";
 import MemberManagementPage from "../../pages/MemberManagementPage";
-import faker from 'faker';
-
+const { generateRandomFirstName } = require('../randomDataGenerator');
 
 const inviteMemberPage = new InviteMemberPage();
 const memberManagmentPage = new MemberManagementPage();
 
 
-
-  generateRandomData = () => {
-    faker = require('faker');
-    return {
-      firstName: faker.name.firstName(),
-      lastName: faker.name.lastName(),
-      email: faker.internet.email(),
-      phone: faker.phone.phoneNumber(),
-    };
-  };
 
 describe("",()=>{
     beforeEach(() => {
@@ -26,12 +15,10 @@ describe("",()=>{
     it("verifyFunctionalityOFInvitationMember",() => {
         memberManagmentPage.open();
         const rowSize = memberManagmentPage.getRowCount();
-        const randomData = generateRandomData();
-
-
         inviteMemberPage.open();
+        const randomFirstName = generateRandomFirstName();
         inviteMemberPage
-        .setFirstName(randomData.firstName);
+        .setFirstName(randomFirstName);
         
 
 
