@@ -7,7 +7,7 @@ class MemberManagementPage extends BasePage {
 
  editButtonIndex = () => cy.get("tr > td > svg[data-testid='EditIcon']").eq(0);
 
- editButton = () => cy.get("tr > td > svg[data-testid='EditIcon']");
+ editButton = "tr > td > svg[data-testid='EditIcon']";
 
 
   getRowCount() {
