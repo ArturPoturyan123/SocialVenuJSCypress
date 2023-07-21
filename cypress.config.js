@@ -11,3 +11,13 @@ module.exports = defineConfig({
     password:"123456",
   },
 });
+const path = require('path');
+
+module.exports = (on, config) => {
+  config.webpack.resolve.alias = {
+    ...config.webpack.resolve.alias,
+    faker: path.resolve(__dirname, '../../node_modules/faker'),
+  };
+  return config;
+};
+
