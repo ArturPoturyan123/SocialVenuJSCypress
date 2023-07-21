@@ -11,7 +11,8 @@ class MemberManagementPage extends BasePage {
 
 
   getRowCount() {
-    return tableRows().then(rows => rows.length);
+    cy.wait(2000);
+    return  cy.get(this.tableRows).its('length').as('initialRowCount');
   }
 
   clickEditButton(){

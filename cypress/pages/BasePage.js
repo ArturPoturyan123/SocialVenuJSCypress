@@ -34,7 +34,6 @@ export  class BasePage{
       cy.get(element).should('be.visible').should('not.be.disabled');
     }
 
-
     generateRandomNumber() {
       const randomNumber = Math.floor(Math.random() * 1000000000);
       return `${randomNumber}`.padStart(10, '0');
@@ -66,4 +65,3 @@ export  class BasePage{
 }
 
 }
-
