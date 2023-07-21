@@ -3,7 +3,7 @@ import { BasePage } from "./BasePage";
 
 class MemberManagementPage extends BasePage {
 
- tableRows = () => cy.get("tbody[class*='MuiTableBody-root'] > tr");
+ tableRows = "tbody[class*='MuiTableBody-root'] > tr";
 
  editButtonIndex = () => cy.get("tr > td > svg[data-testid='EditIcon']").eq(0);
 
@@ -11,8 +11,7 @@ class MemberManagementPage extends BasePage {
 
 
   getRowCount() {
-    cy.wait(2000);
-    return  cy.get(this.tableRows).its('length').as('initialRowCount');
+    return  cy.get(this.tableRows).its('length');
   }
 
   clickEditButton(){
