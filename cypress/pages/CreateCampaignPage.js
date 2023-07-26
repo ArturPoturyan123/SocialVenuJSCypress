@@ -56,7 +56,6 @@ class CreateCampaignPage extends BasePage{
         super.waitTextFieldShouldBeEmpty(this.rewardPhoneNumberInput,'have.value','');
         const phoneNumberText = super.generateRandomNumber();
         cy.get(this.rewardPhoneNumberInput).type(phoneNumberText);
-
     }
 
     clickSaveAndCreateButton(){
@@ -68,9 +67,6 @@ class CreateCampaignPage extends BasePage{
     clickAwarenessCampaignType(){
         cy.get(this.awarenessCampaignType).click();
     }
-
-
-
 }
 
 export default CreateCampaignPage;

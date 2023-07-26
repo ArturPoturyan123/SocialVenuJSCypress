@@ -48,7 +48,6 @@ describe("Dashboard", () => {
       performacePage.visit();
       cy.wait(2000)
       performacePage.ClickCalendarButton();
-      cy.get("#since_beginning-date-range-button").should("be.visible");
-     
+      cy.get("#since_beginning-date-range-button").should("be.visible");  
     });
   });

@@ -18,7 +18,6 @@ class MemberManagementPage extends BasePage {
     cy.get(this.editButton).should("be.visible").eq(0).click({force: true});
   }
 
-
     getUrl(){
         return super.getUrl("accounts/members");
     }

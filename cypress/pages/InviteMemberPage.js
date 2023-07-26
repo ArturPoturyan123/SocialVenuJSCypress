@@ -30,17 +30,9 @@ class InviteMemberPage extends BasePage {
         return cy.get(this.phoneNumberField).type(name, { force: true });
     }
 
-
-
-
-
     getUrl(){
         return super.getUrl("members/invite");
     }
-
-
-
-
 }
 
 

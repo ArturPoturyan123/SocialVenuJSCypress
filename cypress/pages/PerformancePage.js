@@ -41,8 +41,6 @@ class PerformacePage extends BasePage{
     ClickCalendarButton(){
         cy.get(this.calendarButton).click({force:true});
     }
-  
-
 }
 
 export default PerformacePage;

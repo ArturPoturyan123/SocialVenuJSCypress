@@ -11,7 +11,6 @@ class CampaignsMainPage extends BasePage{
     getUrl(){
         return super.getUrl("reward-campaigns");
     }
-
 }
 
 export default CampaignsMainPage;

@@ -27,8 +27,6 @@ class DasboardLoginPage extends BasePage{
     allAccountsButton(){
         return this.allAccountsBtn;
     }
-
-
 }
 
 export default DasboardLoginPage;

@@ -14,9 +14,6 @@ class MemberProfilePage extends BasePage {
     deleteMember(){
         cy.get(this.deleteUserButton).should('be.visible').click({force: true});
     }
-
-
-
 }
 
 export default MemberProfilePage;

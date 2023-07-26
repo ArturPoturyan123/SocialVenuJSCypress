@@ -10,7 +10,5 @@ describe("Verify the functionality of Sign in into SV Dashboard",()=>{
         dasboardLoginPage.pressSignInButton();
         cy.url().should('include','profile/accounts');
         cy.contains(dasboardLoginPage.allAccountsButton()).should('exist');
-    })
-
-    
+    })    
 })
