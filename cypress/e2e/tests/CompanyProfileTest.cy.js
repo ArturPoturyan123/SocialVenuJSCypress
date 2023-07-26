@@ -3,6 +3,7 @@ import CompanyProfilePage from "../../pages/CompanyProfilePage";
 const companyProfilePage = new CompanyProfilePage();
 
 describe("", () => {
+  cy.allureDescription("This is a description for my test");  
   beforeEach(() => {
     cy.login();
   });

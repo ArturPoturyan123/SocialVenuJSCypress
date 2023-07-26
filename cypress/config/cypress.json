@@ -1,0 +1,7 @@
+{
+    "reporter": "cypress-allure-plugin",
+    "reporterOptions": {
+      "outputDir": "allure-results"
+    }
+  }
+  
