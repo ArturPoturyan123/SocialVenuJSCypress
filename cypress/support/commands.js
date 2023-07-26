@@ -44,11 +44,3 @@ Cypress.Commands.add("login", () => {
     window.localStorage.setItem("authResponse", JSON.stringify(resp.body));
   });
 });
-
-// cypress/support/commands.js
-Cypress.Commands.add("allureDescription", (description) => {
-  cy.task("allure:attach", {
-    name: "Description",
-    value: description,
-  });
-});
