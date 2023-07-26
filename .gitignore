@@ -1,3 +1,4 @@
 # Ignore Allure report results
 allure-report/
 allure-results/
+videos/
