@@ -1,4 +1,4 @@
-import { BasePage } from "../../pages/BasePage";
+import { BasePage } from "./BasePage";
 
 class DasboardLoginPage extends BasePage {
   email = 'input[name="email"]';
