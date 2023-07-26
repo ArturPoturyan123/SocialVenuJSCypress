@@ -8,7 +8,7 @@ class MyProfilePage extends BasePage {
     this.eraseAllTextField(this.accountNameField);
     cy.wait(2000);
     cy.get(this.accountNameField).should("be.empty");
-    const valueString = "Test Automation Company Name " + randomText;
+    const valueString = "Test Automation Account Name " + randomText;
     cy.get(this.accountNameField).type(valueString);
   }
 
