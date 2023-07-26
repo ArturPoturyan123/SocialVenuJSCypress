@@ -1,4 +1,3 @@
-import { BasePage } from "../../pages/BasePage";
 import CompanyProfilePage from "../../pages/CompanyProfilePage";
 
 

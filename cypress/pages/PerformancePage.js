@@ -1,4 +1,6 @@
-class PerformacePage{
+import { BasePage } from "../../pages/BasePage";
+
+class PerformacePage extends BasePage{
 
     topBarTitle = "#chart-topbar-title";
     statisticBlockVideos = '#statistic-block-Videos';
