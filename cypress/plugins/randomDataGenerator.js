@@ -1,5 +1,5 @@
 // Import any other libraries you may need to generate random data
-const Chance = require('chance');
+const Chance = require("chance");
 
 const chance = new Chance(); // Create a new instance of Chance for generating random data
 
@@ -9,7 +9,7 @@ const generateRandomData = () => {
     firstName: chance.first(),
     lastName: chance.last(),
     email: chance.email(),
-    phone: chance.phone({ formatted: false, country: 'us' }), // Generate US phone numbers in non-formatted format
+    phone: chance.phone({ formatted: false, country: "us" }), // Generate US phone numbers in non-formatted format
   };
 };
 

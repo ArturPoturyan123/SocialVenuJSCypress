@@ -24,22 +24,23 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login', () => { 
-    cy.request({
-        method: "POST",
-        url: `https://sv-api-rc.socialvenu.com/api/v1/auth/customer`,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      body: JSON.stringify({
-        email: "arthurp@doublecoconut.com",
-        password: "123456",
-      }),
-    })
-    .then((resp) => {
-        window.localStorage.setItem("authToken", resp.body.accessToken);
-        window.localStorage.setItem("selectedVenue", "d99fb02b-a31b-418c-a206-36c5fad999ba");
-        window.localStorage.setItem("authResponse", JSON.stringify(resp.body));
-    })
-  
-  })
+Cypress.Commands.add("login", () => {
+  cy.request({
+    method: "POST",
+    url: `https://sv-api-rc.socialvenu.com/api/v1/auth/customer`,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: "arthurp@doublecoconut.com",
+      password: "123456",
+    }),
+  }).then((resp) => {
+    window.localStorage.setItem("authToken", resp.body.accessToken);
+    window.localStorage.setItem(
+      "selectedVenue",
+      "d99fb02b-a31b-418c-a206-36c5fad999ba"
+    );
+    window.localStorage.setItem("authResponse", JSON.stringify(resp.body));
+  });
+});

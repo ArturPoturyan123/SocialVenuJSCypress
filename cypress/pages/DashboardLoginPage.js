@@ -1,32 +1,30 @@
 import { BasePage } from "../../pages/BasePage";
 
-class DasboardLoginPage extends BasePage{
+class DasboardLoginPage extends BasePage {
+  email = 'input[name="email"]';
+  password = 'input[name="password"]';
+  signInBtn = 'button[type="submit"]';
+  allAccountsBtn = "All Accounts";
 
-    email = 'input[name="email"]';
-    password = 'input[name="password"]';
-    signInBtn = 'button[type="submit"]';
-    allAccountsBtn = 'All Accounts';
+  visit() {
+    cy.visit("login");
+  }
 
+  emailField(text) {
+    cy.get(this.email).type(text, { force: true });
+  }
 
-    visit(){
-        cy.visit("login")
-    }
+  passwordField(text) {
+    cy.get(this.password).type(text, { force: true });
+  }
 
-    emailField(text){
-        cy.get(this.email).type(text,{ force:true });
-    }
+  pressSignInButton() {
+    cy.get(this.signInBtn).click({ force: true });
+  }
 
-    passwordField(text){
-        cy.get(this.password).type(text,{ force:true });
-    }
-
-    pressSignInButton(){
-       cy.get(this.signInBtn).click({ force:true });
-    }
-
-    allAccountsButton(){
-        return this.allAccountsBtn;
-    }
+  allAccountsButton() {
+    return this.allAccountsBtn;
+  }
 }
 
 export default DasboardLoginPage;

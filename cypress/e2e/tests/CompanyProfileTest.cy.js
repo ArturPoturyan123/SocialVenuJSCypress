@@ -1,58 +1,81 @@
 import CompanyProfilePage from "../../pages/CompanyProfilePage";
 
-
-
 const companyProfilePage = new CompanyProfilePage();
 
-describe("",()=>{
-    beforeEach(() => {
-        cy.login();
-    });
+describe("", () => {
+  beforeEach(() => {
+    cy.login();
+  });
 
-    it("verifyFunctionalitySavingNewCompanyName",() => {
-        companyProfilePage.open();
-        const randomText = companyProfilePage.getString();
-        companyProfilePage.setRandomCompanyName(randomText);
-        const setNewCompanyName = companyProfilePage.getCompanyName().toString();
-        companyProfilePage.clickSaveButton();
-        const getCurrentCompanyName = companyProfilePage.getCompanyName().toString();
+  it("Verify the functionality of saving Company Name", () => {
+    companyProfilePage.open();
+    const randomText = companyProfilePage.getString();
+    companyProfilePage.setRandomCompanyName(randomText);
+    companyProfilePage.getCompanyName().then((setNewCompanyName) => {
+      setNewCompanyName = setNewCompanyName.trim();
+      companyProfilePage.clickSaveButton();
+      companyProfilePage.getCompanyName().then((getCurrentCompanyName) => {
+        getCurrentCompanyName = getCurrentCompanyName.trim();
         expect(setNewCompanyName).to.equal(getCurrentCompanyName);
-    })
+      });
+    });
+  });
 
-  it("verifyFunctionalitySavingNewCompanyAddress",() => {
-        companyProfilePage.open();
-        const randomText = companyProfilePage.getString();
-        companyProfilePage.setRandomCompanyAddress(randomText);
-        const setNewCompanyAddress = companyProfilePage.getCompanyAddress().toString();
+  it("Verify the functionality of saving Company Address", () => {
+    companyProfilePage.open();
+    const randomText = companyProfilePage.getString();
+    companyProfilePage.setRandomCompanyAddress(randomText);
+    companyProfilePage
+      .getCompanyAddress()
+      .then((setNewCompanyAddressElement) => {
+        const setNewCompanyAddress = setNewCompanyAddressElement.trim();
         companyProfilePage.clickSaveButton();
-        const getCurrentCompanyAddress = companyProfilePage.getCompanyAddress().toString();
-        expect(setNewCompanyAddress).to.equal(getCurrentCompanyAddress);
-    })
+        companyProfilePage
+          .getCompanyAddress()
+          .then((getCurrentCompanyAddressElement) => {
+            const getCurrentCompanyAddress =
+              getCurrentCompanyAddressElement.trim();
+            expect(setNewCompanyAddress).to.equal(getCurrentCompanyAddress);
+          });
+      });
+  });
 
-    it("verifyFunctionalitySavingNewCompanyAddress",() => {
-        companyProfilePage.open();
-        companyProfilePage.setRandomCityName();
-        const newCityName = companyProfilePage.getCityName().toString();
-        companyProfilePage.clickSaveButton();
-        const getCurrentCityName = companyProfilePage.getCityName().toString();
+  it("Verify the functionality of saving City name", () => {
+    companyProfilePage.open();
+    companyProfilePage.setRandomCityName();
+    companyProfilePage.getCityName().then((newCityElement) => {
+      const newCityName = newCityElement.trim();
+      companyProfilePage.clickSaveButton();
+      companyProfilePage.getCityName().then((getCurrentCityElement) => {
+        const getCurrentCityName = getCurrentCityElement.trim();
         expect(newCityName).to.equal(getCurrentCityName);
-    })
+      });
+    });
+  });
 
-    it("verifyFunctionalitySavingNewCompanyWebSite",() => {
-        companyProfilePage.open();
-        companyProfilePage.setRandomCompanyWebsite();
-        const newWebsiteUrl = companyProfilePage.getWebSiteUrl().toString();
-        companyProfilePage.clickSaveButton();
-        const getCurrentWebSiteUrl = companyProfilePage.getWebSiteUrl().toString();
-        expect(newWebsiteUrl).to.equal(getCurrentWebSiteUrl);
-    })
+  it("Verify the functionality of saving Company Web site url", () => {
+    companyProfilePage.open();
+    companyProfilePage.setRandomCompanyWebsite();
+    companyProfilePage.getWebSiteUrl().then((setNewWebsiteUrlElement) => {
+      const setNewWebstieUrl = setNewWebsiteUrlElement.trim();
+      companyProfilePage.clickSaveButton();
+      companyProfilePage.getWebSiteUrl().then((getCurrentWebstieElement) => {
+        const getCurrentWebSiteUrl = getCurrentWebstieElement.trim();
+        expect(setNewWebstieUrl).to.equal(getCurrentWebSiteUrl);
+      });
+    });
+  });
 
-    it("verifyFunctionalitySavingNewZipCode",() => {
-        companyProfilePage.open();
-        companyProfilePage.setRandomZipCode();
-        const newZipCode = companyProfilePage.getZipCode().toString();
-        companyProfilePage.clickSaveButton();
-        const getCurrentZipCode = companyProfilePage.getZipCode().toString();
+  it("Verify the functionality of saving Zip Code", () => {
+    companyProfilePage.open();
+    companyProfilePage.setRandomZipCode();
+    companyProfilePage.getZipCode().then((newZipCodeElement) => {
+      const newZipCode = newZipCodeElement.trim();
+      companyProfilePage.clickSaveButton();
+      companyProfilePage.getZipCode().then((getCurrentZipCodeElement) => {
+        const getCurrentZipCode = getCurrentZipCodeElement.trim();
         expect(newZipCode).to.equal(getCurrentZipCode);
-    })
-})
+      });
+    });
+  });
+});
