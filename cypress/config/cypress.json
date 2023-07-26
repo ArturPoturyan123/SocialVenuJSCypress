@@ -1,7 +1,4 @@
 {
-    "reporter": "cypress-allure-plugin",
-    "reporterOptions": {
-      "outputDir": "allure-results"
-    }
-  }
-  
+  "pluginsFile": "cypress/plugins/index.js",
+  "reporter": "@shelex/cypress-allure-plugin/reporter"
+}
