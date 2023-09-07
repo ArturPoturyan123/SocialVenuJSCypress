@@ -11,6 +11,7 @@ class CreateCampaignPage extends BasePage {
   phoneNumber = "Phone Number";
   rewardPhoneNumberInput = "#reward-phone-number-input";
   saveAndCreateButton = "#save-and-create-button";
+  campaignRewardNameInput = "#campaign-reward-name-input";
   editSmsInvitationButton = "#edit-sms-invitation-button";
   awarenessCampaignType = "#campaign-type-change-button-Awareness-Campaign";
   campaignSte4 = "How would you like to reward creators?";
@@ -22,13 +23,18 @@ class CreateCampaignPage extends BasePage {
   clickGoBackBtn() {
     cy.get(this.goBackButton).should("be.visible").click();
   }
+  setCampaignRewardName(){
+    cy.get(this.campaignRewardNameInput).should("be.empty");
+    cy.get(this.campaignRewardNameInput).type("test");
+  }
 
   openAllIncentiveCampaignSteps() {
+    this.createCampaignSteps.push(cy.get("#create_campaign_step_1"));
     this.createCampaignSteps.push(cy.get("#create_campaign_step_2"));
     this.createCampaignSteps.push(cy.get("#create_campaign_step_3"));
     this.createCampaignSteps.push(cy.get("#create_campaign_step_4"));
-    this.createCampaignSteps.push(cy.get("#create_campaign_step_5"));
-    this.createCampaignSteps.push(cy.get("#create_campaign_step_6"));
+    // this.createCampaignSteps.push(cy.get("#create_campaign_step_5"));
+    // this.createCampaignSteps.push(cy.get("#create_campaign_step_6"));
     this.createCampaignSteps.forEach((createCampaignStep) => {
       cy.wait(2000);
       createCampaignStep.click({ force: true });

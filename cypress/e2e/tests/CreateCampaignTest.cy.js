@@ -32,8 +32,8 @@ describe("", () => {
 
   it("Verify the functionality of creating new default campaign", () => {
     createCampaignPage.open();
+    createCampaignPage.setCampaignRewardName();
     createCampaignPage.openAllIncentiveCampaignSteps();
-    createCampaignPage.clickCreateCampaignStep4();
     createCampaignPage.clickSelectBtn();
     createCampaignPage.clickPhoneNumber();
     createCampaignPage.setRewardPhoneNumber();
@@ -51,8 +51,5 @@ describe("", () => {
     );
   });
 
-  it("Verify the functionality of step 4 displayed after selecting incentive type", () => {
-    createCampaignPage.open();
-    createCampaignPage.isElementPresentByXpath(createCampaignPage.campaignSte4);
-  });
+
 });
