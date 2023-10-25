@@ -17,6 +17,7 @@ describe("", () => {
       companyProfilePage.getCompanyName().then((getCurrentCompanyName) => {
         getCurrentCompanyName = getCurrentCompanyName.trim();
         expect(setNewCompanyName).to.equal(getCurrentCompanyName);
+        
       });
     });
   });
