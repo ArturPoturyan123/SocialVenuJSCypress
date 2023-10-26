@@ -3,6 +3,5 @@ allure-report/
 allure-results/
 videos/
 cypress/screenshots/**
-cypress/videos/
+cypress/videos/**
 node_modules/
-cypress/videos/CompanyProfileTest.cy.js.mp4
