@@ -2,6 +2,6 @@
 allure-report/
 allure-results/
 videos/
-cypress\screenshots/
-cypress\videos/
 node_modules
+cypress\screenshots
+cypress\videos
