@@ -50,6 +50,4 @@ describe("", () => {
       createCampaignPage.campaignSte4
     );
   });
-
-
 });
