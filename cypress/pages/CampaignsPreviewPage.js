@@ -2,6 +2,15 @@ import { BasePage } from "./BasePage";
 
 class CampaignsPreviewPage extends BasePage {
   returnToCampaignsButton = "#return-to-campaigns-button";
+  editCampaignButton = "#composition-button";
+  welcomeVideoButton = "#Welcome-Video-button";
+
+  clickEditCampaignButton() {
+    cy.get(this.editCampaignButton).should("be.visible").click({ force: true });
+  }
+  clickWelcomeVideoButton() {
+    cy.get(this.welcomeVideoButton).should("be.visible").click({ force: true });
+  }
   getUrl() {
     return super.getUrl("reward-campaigns");
   }
