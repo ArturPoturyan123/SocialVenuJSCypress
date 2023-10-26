@@ -5,10 +5,6 @@ describe("Campaigns Preview Page", () => {
 
   beforeEach(() => {
     cy.login();
-
-
-
-    
   });
 
   it("verify the functionality to open the exact campaigns preview page", () => {
