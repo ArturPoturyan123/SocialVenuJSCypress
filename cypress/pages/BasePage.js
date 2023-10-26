@@ -13,6 +13,7 @@ export class BasePage {
 
   open() {
     cy.visit(this.getUrl());
+    cy.wait(2000);
   }
 
   clickBrowserBackButton() {

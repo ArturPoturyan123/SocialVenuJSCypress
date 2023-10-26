@@ -36,12 +36,12 @@ class CompanyProfilePage extends BasePage {
     ];
     const randomIndex = Cypress._.random(0, companyWebsites.length - 1);
     const randomWebsite = "https://" + companyWebsites[randomIndex];
+    cy.wait(2000);
     cy.get(this.webSiteField).type(randomWebsite);
   }
 
   setRandomCompanyName(randomText) {
     this.eraseAllTextField(this.companyNameField);
-    cy.wait(2000);
     cy.get(this.companyNameField).should("be.empty");
     const valueString = "Test Automation Company Name " + randomText;
     cy.get(this.companyNameField).type(valueString);
@@ -49,7 +49,6 @@ class CompanyProfilePage extends BasePage {
 
   setRandomCompanyAddress(randomText) {
     this.eraseAllTextField(this.addressNameField);
-    cy.wait(2000);
     cy.get(this.addressNameField).should("be.empty");
     const valueString = "Test Automation Company Address " + randomText;
     cy.get(this.addressNameField).type(valueString);
@@ -57,7 +56,6 @@ class CompanyProfilePage extends BasePage {
 
   setRandomZipCode() {
     this.eraseAllTextField(this.zipCodeField);
-    cy.wait(2000);
     cy.get(this.zipCodeField).should("be.empty");
     const randomZipCode = String(10000 + Math.floor(Math.random() * 90000));
     cy.get(this.zipCodeField).clear({ force: true }).type(randomZipCode);
