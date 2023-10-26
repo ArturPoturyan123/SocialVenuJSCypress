@@ -15,7 +15,7 @@
     "faker": "^6.6.6"
   },
   "scripts": {
-    "ui-regression-allure": "cypress run --browser chrome --spec cypress/e2e/tests/**/*.js --env allure=true"
+    "ui-regression-allure": "cypress run --browser chrome --spec 'cypress/e2e/tests/**/*.js' --env allure=true && npx allure generate --clean && npx allure serve"
   },
   "author": "",
   "license": "ISC",
