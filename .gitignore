@@ -5,3 +5,4 @@ videos/
 cypress/screenshots/**
 cypress/videos/
 node_modules/
+cypress/videos/CompanyProfileTest.cy.js.mp4
