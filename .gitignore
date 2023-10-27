@@ -28,3 +28,6 @@ allure-report/widgets/status-chart.json
 allure-report/widgets/suites.json
 allure-report/widgets/summary.json
 cypress/downloads/downloads.htm
+allure-report/index.html
+allure-report/export/influxDbData.txt
+allure-report/export/prometheusData.txt
