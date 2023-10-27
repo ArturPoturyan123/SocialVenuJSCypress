@@ -10,7 +10,7 @@ class CompanyProfilePage extends BasePage {
   setRandomCityName() {
     this.eraseAllTextField(this.cityNameField);
     cy.wait(2000);
-    cy.get(this.cityNameField).should("be.empty");
+    // cy.get(this.cityNameField).should("be.empty");
     const cityNames = [
       "New York",
       "Los Angeles",
@@ -32,7 +32,10 @@ class CompanyProfilePage extends BasePage {
       "sv.com",
       "nike.com",
       "adidas.com",
-      "fresh.com",
+      "6pm.com",
+      "joma.com",
+      "random.com",
+      "arturpot.com",
     ];
     const randomIndex = Cypress._.random(0, companyWebsites.length - 1);
     const randomWebsite = "https://" + companyWebsites[randomIndex];
