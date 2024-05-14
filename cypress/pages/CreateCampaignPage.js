@@ -23,7 +23,7 @@ class CreateCampaignPage extends BasePage {
   clickGoBackBtn() {
     cy.get(this.goBackButton).should("be.visible").click();
   }
-  setCampaignRewardName(){
+  setCampaignRewardName() {
     cy.get(this.campaignRewardNameInput).should("be.empty");
     cy.get(this.campaignRewardNameInput).type("test");
   }
@@ -46,6 +46,7 @@ class CreateCampaignPage extends BasePage {
   }
 
   clickSelectBtn() {
+    cy.contains("Select...").scrollIntoView();
     cy.contains(this.contactMethodSelectBtn)
       .should("be.visible")
       .click({ force: true });

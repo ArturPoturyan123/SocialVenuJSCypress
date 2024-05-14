@@ -23,7 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
+Cypress.Commands.add("checkTextExists", (text) => {
+  cy.contains(text).should("exist");
+});
 Cypress.Commands.add("login", () => {
   cy.request({
     method: "POST",
