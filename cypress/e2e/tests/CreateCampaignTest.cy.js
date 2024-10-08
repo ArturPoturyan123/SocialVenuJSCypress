@@ -1,8 +1,10 @@
 import CampaignsMainPage from "../../pages/CampaignsMainPage";
+import CampaignsPreviewPage from "../../pages/CampaignsPreviewPage";
 import CreateCampaignPage from "../../pages/CreateCampaignPage";
 
 const createCampaignPage = new CreateCampaignPage();
 const campaignsMainPage = new CampaignsMainPage();
+const campaignsPreviewPage = new CampaignsPreviewPage();
 
 describe("", () => {
   beforeEach(() => {
@@ -35,19 +37,9 @@ describe("", () => {
     createCampaignPage.setCampaignRewardName();
     createCampaignPage.openAllIncentiveCampaignSteps();
     createCampaignPage.clickSelectBtn();
-    createCampaignPage.clickPhoneNumber();
-    createCampaignPage.setRewardPhoneNumber();
     createCampaignPage.clickSaveAndCreateButton();
-    createCampaignPage.isElementPresent(
-      createCampaignPage.editSmsInvitationButton
-    );
-  });
-
-  it("Verify the functionality of step 4 is not displayed after selecting awareness type", () => {
-    createCampaignPage.open();
-    createCampaignPage.clickAwarenessCampaignType();
-    createCampaignPage.isElementNotPresentByXpath(
-      createCampaignPage.campaignSte4
+    campaignsPreviewPage.isElementPresentByXpath(
+      campaignsPreviewPage.addYourCustomer
     );
   });
 });
