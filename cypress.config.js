@@ -14,5 +14,6 @@ module.exports = defineConfig({
     BACKEND_URL: "https://sv-api-rc.socialvenu.com",
     email: "arthurp@doublecoconut.com",
     password: "123456",
+    
   },
 });
