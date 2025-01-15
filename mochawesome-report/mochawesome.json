@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-15T14:12:05.213Z",
+    "end": "2025-01-15T14:12:18.028Z",
+    "duration": 12815,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dd33950e-82bc-4850-b37c-3ecefbb62c67",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\MemberProfileTest.cy.js",
+      "file": "cypress\\e2e\\tests\\MemberProfileTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "309e7056-19b7-46ab-a8b6-4b4ca7180a74",
+          "title": "Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the functionality of delete Member from Member Management list",
+              "fullTitle": "Dashboard Verify the functionality of delete Member from Member Management list",
+              "timedOut": null,
+              "duration": 12701,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\MemberProfileTest.cy.js\"\n}",
+              "code": "memberManagementPage.open();\ncy.wait(4000);\nlet initialRowCount;\nmemberManagementPage.getRowCount().then(count => {\n  initialRowCount = count;\n  cy.log(`Initial Row Count: ${initialRowCount}`);\n  console.log(\"Initial Row Count (console log):\", initialRowCount);\n  memberManagementPage.clickEditButton();\n  memberProfilePage.clickRemoveMemberBtn();\n  memberProfilePage.deleteMember();\n  memberManagementPage.getRowCount().should(\"eq\", initialRowCount - 1);\n});",
+              "err": {},
+              "uuid": "5aff3ef3-6ee4-453b-a0e3-af04a31d9e15",
+              "parentUUID": "309e7056-19b7-46ab-a8b6-4b4ca7180a74",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5aff3ef3-6ee4-453b-a0e3-af04a31d9e15"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12701,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
