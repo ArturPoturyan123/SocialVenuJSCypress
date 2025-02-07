@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-07T12:58:41.692Z",
+    "end": "2025-02-07T12:58:48.343Z",
+    "duration": 6651,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8239c5b4-a7d6-45fb-b6f2-44840ab640bf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DashboardLoginTest.cy.js",
+      "file": "cypress\\e2e\\tests\\DashboardLoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "68a953e5-da96-407f-91b8-94cada8223c4",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the functionality of Sign in into SV Dashboard",
+              "fullTitle": " Verify the functionality of Sign in into SV Dashboard",
+              "timedOut": null,
+              "duration": 6562,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\DashboardLoginTest.cy.js\"\n}",
+              "code": "dasboardLoginPage.visit();\ndasboardLoginPage.emailField(Cypress.config(\"email\"));\ndasboardLoginPage.passwordField(Cypress.config(\"password\"));\ndasboardLoginPage.pressSignInButton();\ncy.url().should(\"include\", \"profile/accounts\");\ncy.contains(dasboardLoginPage.allAccountsButton()).should(\"exist\");",
+              "err": {},
+              "uuid": "2f87bdd5-12d2-4686-ad13-0ed5a1a7969d",
+              "parentUUID": "68a953e5-da96-407f-91b8-94cada8223c4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2f87bdd5-12d2-4686-ad13-0ed5a1a7969d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6562,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

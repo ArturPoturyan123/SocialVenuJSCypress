@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-07T12:50:40.258Z",
+    "end": "2025-02-07T12:50:54.640Z",
+    "duration": 14382,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "32bfa757-bbca-4a39-9d8e-f0657fdc6fa7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\MemberProfileTest.cy.js",
+      "file": "cypress\\e2e\\tests\\MemberProfileTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f92d2482-af27-4ffc-a752-dc6a9bf4ac65",
+          "title": "Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the functionality of delete Member from Member Management list",
+              "fullTitle": "Dashboard Verify the functionality of delete Member from Member Management list",
+              "timedOut": null,
+              "duration": 14226,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\MemberProfileTest.cy.js\"\n}",
+              "code": "memberManagementPage.open();\ncy.wait(4000);\nlet initialRowCount;\nmemberManagementPage.getRowCount().then(count => {\n  initialRowCount = count;\n  cy.log(`Initial Row Count: ${initialRowCount}`);\n  console.log(\"Initial Row Count (console log):\", initialRowCount);\n  memberManagementPage.clickEditButton();\n  memberProfilePage.clickRemoveMemberBtn();\n  memberProfilePage.deleteMember();\n  memberManagementPage.getRowCount().should(\"eq\", initialRowCount - 1);\n});",
+              "err": {},
+              "uuid": "f7ff0dbe-1ef3-449c-82ce-8cccac40171f",
+              "parentUUID": "f92d2482-af27-4ffc-a752-dc6a9bf4ac65",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7ff0dbe-1ef3-449c-82ce-8cccac40171f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

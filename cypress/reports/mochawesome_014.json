@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-02-07T13:02:09.124Z",
+    "end": "2025-02-07T13:02:34.414Z",
+    "duration": 25290,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "57133756-4363-4cfc-b577-4201af704707",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\CreateCampaignTest.cy.js",
+      "file": "cypress\\e2e\\tests\\CreateCampaignTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba822889-e808-42e4-9fa1-da1ce6e616e1",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the functionality of the shows Top Bar on the Create Campaign page",
+              "fullTitle": " Verify the functionality of the shows Top Bar on the Create Campaign page",
+              "timedOut": null,
+              "duration": 7551,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CreateCampaignTest.cy.js\"\n}",
+              "code": "campaignsMainPage.open();\ncampaignsMainPage.clickCreateNewCampaignBtn();\ncy.get(createCampaignPage.goBackButton).should(\"be.visible\");\ncy.contains(createCampaignPage.createACampaignTitle).should(\"be.visible\");\ncy.get(createCampaignPage.saveCreateBtn).should(\"be.visible\");",
+              "err": {},
+              "uuid": "f2004938-579c-49f9-92df-8a2efb71256a",
+              "parentUUID": "ba822889-e808-42e4-9fa1-da1ce6e616e1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of return to campaign list",
+              "fullTitle": " Verify the functionality of return to campaign list",
+              "timedOut": null,
+              "duration": 5446,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CreateCampaignTest.cy.js\"\n}",
+              "code": "createCampaignPage.open();\ncreateCampaignPage.clickGoBackBtn();\ncy.get(campaignsMainPage.createNewCampaignBtn).should(\"be.visible\");",
+              "err": {},
+              "uuid": "489ed58b-7f72-49eb-a4cb-d520cd96747c",
+              "parentUUID": "ba822889-e808-42e4-9fa1-da1ce6e616e1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of show Unsaved changes modal",
+              "fullTitle": " Verify the functionality of show Unsaved changes modal",
+              "timedOut": null,
+              "duration": 4340,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CreateCampaignTest.cy.js\"\n}",
+              "code": "campaignsMainPage.open();\ncampaignsMainPage.clickCreateNewCampaignBtn();\ncreateCampaignPage.clickBrowserBackButton();\ncy.contains(createCampaignPage.unsavedChangesModal).should(\"be.visible\");",
+              "err": {},
+              "uuid": "309ab669-61a4-4cce-88f3-22969484fc5c",
+              "parentUUID": "ba822889-e808-42e4-9fa1-da1ce6e616e1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of creating new default campaign",
+              "fullTitle": " Verify the functionality of creating new default campaign",
+              "timedOut": null,
+              "duration": 7698,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CreateCampaignTest.cy.js\"\n}",
+              "code": "createCampaignPage.open();\ncreateCampaignPage.setCampaignRewardName();\ncreateCampaignPage.openAllIncentiveCampaignSteps();\ncreateCampaignPage.clickSelectBtn();\ncreateCampaignPage.clickSaveAndCreateButton();\ncampaignsPreviewPage.isElementPresentByXpath(campaignsPreviewPage.addYourCustomer);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#campaign-reward-name-input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#campaign-reward-name-input`, but never found it.\n    at CreateCampaignPage.setCampaignRewardName (webpack:///./cypress/pages/CreateCampaignPage.js:27:41)\n    at Context.eval (webpack:///./cypress/e2e/tests/CreateCampaignTest.cy.js:37:23)",
+                "diff": null
+              },
+              "uuid": "1c3f90fd-6c25-4a9c-90fe-c218e633a4f3",
+              "parentUUID": "ba822889-e808-42e4-9fa1-da1ce6e616e1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f2004938-579c-49f9-92df-8a2efb71256a",
+            "489ed58b-7f72-49eb-a4cb-d520cd96747c",
+            "309ab669-61a4-4cce-88f3-22969484fc5c"
+          ],
+          "failures": [
+            "1c3f90fd-6c25-4a9c-90fe-c218e633a4f3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25035,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

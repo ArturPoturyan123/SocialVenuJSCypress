@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-02-07T12:57:17.534Z",
+    "end": "2025-02-07T12:58:06.195Z",
+    "duration": 48661,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "57fabf69-67d9-4054-9735-056bf07a9d18",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\CompanyProfileTest.cy.js",
+      "file": "cypress\\e2e\\tests\\CompanyProfileTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba46674c-62bc-4772-b30d-c695269ea0ab",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the functionality of saving Company Name",
+              "fullTitle": " Verify the functionality of saving Company Name",
+              "timedOut": null,
+              "duration": 10224,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CompanyProfileTest.cy.js\"\n}",
+              "code": "companyProfilePage.open();\nconst randomText = companyProfilePage.getString();\ncompanyProfilePage.setRandomCompanyName(randomText);\ncompanyProfilePage.getCompanyName().then(setNewCompanyName => {\n  setNewCompanyName = setNewCompanyName.trim();\n  companyProfilePage.clickSaveButton();\n  companyProfilePage.getCompanyName().then(getCurrentCompanyName => {\n    getCurrentCompanyName = getCurrentCompanyName.trim();\n    expect(setNewCompanyName).to.equal(getCurrentCompanyName);\n  });\n});",
+              "err": {},
+              "uuid": "a1aa3ad7-8876-4276-a3b6-2e976163aa7c",
+              "parentUUID": "ba46674c-62bc-4772-b30d-c695269ea0ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of saving Company Address",
+              "fullTitle": " Verify the functionality of saving Company Address",
+              "timedOut": null,
+              "duration": 8014,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CompanyProfileTest.cy.js\"\n}",
+              "code": "companyProfilePage.open();\nconst randomText = companyProfilePage.getString();\ncompanyProfilePage.setRandomCompanyAddress(randomText);\ncompanyProfilePage.getCompanyAddress().then(setNewCompanyAddressElement => {\n  const setNewCompanyAddress = setNewCompanyAddressElement.trim();\n  companyProfilePage.clickSaveButton();\n  companyProfilePage.getCompanyAddress().then(getCurrentCompanyAddressElement => {\n    const getCurrentCompanyAddress = getCurrentCompanyAddressElement.trim();\n    expect(setNewCompanyAddress).to.equal(getCurrentCompanyAddress);\n  });\n});",
+              "err": {},
+              "uuid": "5b74e58e-4e4b-45bd-a059-6d2a49ea98df",
+              "parentUUID": "ba46674c-62bc-4772-b30d-c695269ea0ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of saving City name",
+              "fullTitle": " Verify the functionality of saving City name",
+              "timedOut": null,
+              "duration": 12201,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CompanyProfileTest.cy.js\"\n}",
+              "code": "companyProfilePage.open();\ncompanyProfilePage.setRandomCityName();\ncompanyProfilePage.getCityName().then(newCityElement => {\n  const newCityName = newCityElement.trim();\n  companyProfilePage.clickSaveButton();\n  companyProfilePage.getCityName().then(getCurrentCityElement => {\n    const getCurrentCityName = getCurrentCityElement.trim();\n    expect(newCityName).to.equal(getCurrentCityName);\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#bottom-bar-save-action`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#bottom-bar-save-action`, but never found it.\n    at CompanyProfilePage.isElementPresent (webpack:///./cypress/pages/BasePage.js:41:27)\n    at CompanyProfilePage.clickSaveButton (webpack:///./cypress/pages/BasePage.js:6:9)\n    at Context.eval (webpack:///./cypress/e2e/tests/CompanyProfileTest.cy.js:48:25)",
+                "diff": null
+              },
+              "uuid": "846d6265-1d4d-4daf-bea0-aec54cd8f3f9",
+              "parentUUID": "ba46674c-62bc-4772-b30d-c695269ea0ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of saving Company Web site url",
+              "fullTitle": " Verify the functionality of saving Company Web site url",
+              "timedOut": null,
+              "duration": 11205,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CompanyProfileTest.cy.js\"\n}",
+              "code": "companyProfilePage.open();\ncompanyProfilePage.setRandomCompanyWebsite();\ncompanyProfilePage.getWebSiteUrl().then(setNewWebsiteUrlElement => {\n  const setNewWebstieUrl = setNewWebsiteUrlElement.trim();\n  companyProfilePage.clickSaveButton();\n  companyProfilePage.getWebSiteUrl().then(getCurrentWebstieElement => {\n    const getCurrentWebSiteUrl = getCurrentWebstieElement.trim();\n    expect(setNewWebstieUrl).to.equal(getCurrentWebSiteUrl);\n  });\n});",
+              "err": {},
+              "uuid": "8c04c4bd-29ee-4251-aebd-d382aa68b160",
+              "parentUUID": "ba46674c-62bc-4772-b30d-c695269ea0ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the functionality of saving Zip Code",
+              "fullTitle": " Verify the functionality of saving Zip Code",
+              "timedOut": null,
+              "duration": 6627,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\CompanyProfileTest.cy.js\"\n}",
+              "code": "companyProfilePage.open();\ncompanyProfilePage.setRandomZipCode();\ncompanyProfilePage.getZipCode().then(newZipCodeElement => {\n  const newZipCode = newZipCodeElement.trim();\n  companyProfilePage.clickSaveButton();\n  companyProfilePage.getZipCode().then(getCurrentZipCodeElement => {\n    const getCurrentZipCode = getCurrentZipCodeElement.trim();\n    expect(newZipCode).to.equal(getCurrentZipCode);\n  });\n});",
+              "err": {},
+              "uuid": "74ecd4ca-ceb9-4711-9795-2086551f87a7",
+              "parentUUID": "ba46674c-62bc-4772-b30d-c695269ea0ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a1aa3ad7-8876-4276-a3b6-2e976163aa7c",
+            "5b74e58e-4e4b-45bd-a059-6d2a49ea98df",
+            "8c04c4bd-29ee-4251-aebd-d382aa68b160",
+            "74ecd4ca-ceb9-4711-9795-2086551f87a7"
+          ],
+          "failures": [
+            "846d6265-1d4d-4daf-bea0-aec54cd8f3f9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 48271,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
