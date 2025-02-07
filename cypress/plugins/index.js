@@ -7,11 +7,7 @@ module.exports = (on, config) => {
 
   // Register the Allure plugin
   allureWriter(on, config);
-  on('after:run', async () => {
-    await merge({ files: ['cypress/reports/**/*.json'] })
-      .then((mergedReport) => marge.create(mergedReport, { reportDir: 'cypress/reports' }))
-      .catch((err) => console.error(err));
-  });
+
 
   // Add other plugins or configurations if needed
 
