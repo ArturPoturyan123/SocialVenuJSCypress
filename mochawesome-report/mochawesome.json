@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-01-15T14:12:05.213Z",
-    "end": "2025-01-15T14:12:18.028Z",
-    "duration": 12815,
+    "start": "2025-02-07T12:10:31.718Z",
+    "end": "2025-02-07T12:10:46.387Z",
+    "duration": 14669,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "dd33950e-82bc-4850-b37c-3ecefbb62c67",
+      "uuid": "a3f5ab2b-d42c-4910-9116-3f4e5f84982b",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\MemberProfileTest.cy.js",
       "file": "cypress\\e2e\\tests\\MemberProfileTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "309e7056-19b7-46ab-a8b6-4b4ca7180a74",
+          "uuid": "f0be8f48-fb0f-42fa-8b35-74bc774f930f",
           "title": "Dashboard",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Verify the functionality of delete Member from Member Management list",
               "fullTitle": "Dashboard Verify the functionality of delete Member from Member Management list",
               "timedOut": null,
-              "duration": 12701,
+              "duration": 14342,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\tests\\\\MemberProfileTest.cy.js\"\n}",
               "code": "memberManagementPage.open();\ncy.wait(4000);\nlet initialRowCount;\nmemberManagementPage.getRowCount().then(count => {\n  initialRowCount = count;\n  cy.log(`Initial Row Count: ${initialRowCount}`);\n  console.log(\"Initial Row Count (console log):\", initialRowCount);\n  memberManagementPage.clickEditButton();\n  memberProfilePage.clickRemoveMemberBtn();\n  memberProfilePage.deleteMember();\n  memberManagementPage.getRowCount().should(\"eq\", initialRowCount - 1);\n});",
               "err": {},
-              "uuid": "5aff3ef3-6ee4-453b-a0e3-af04a31d9e15",
-              "parentUUID": "309e7056-19b7-46ab-a8b6-4b4ca7180a74",
+              "uuid": "7a4fc217-cdb2-431b-be91-b5264d8fb98e",
+              "parentUUID": "f0be8f48-fb0f-42fa-8b35-74bc774f930f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5aff3ef3-6ee4-453b-a0e3-af04a31d9e15"
+            "7a4fc217-cdb2-431b-be91-b5264d8fb98e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12701,
+          "duration": 14342,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
