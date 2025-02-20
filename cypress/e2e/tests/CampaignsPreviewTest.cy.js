@@ -11,6 +11,7 @@ describe("Campaigns Preview Page", () => {
     campaignsPreviewPage.visit();
     campaignsPreviewPage.isElementPresentByXpath(
       campaignsPreviewPage.addYourCustomer
+      
     );
   });
 
